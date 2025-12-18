@@ -82,6 +82,10 @@ ul {
     margin-bottom: 16px;
 }
 
+label[for="upload"] { /* 上传音乐 */
+    font-size: 14px;
+}
+
 .text-loading {
     font-size: 2rem;
 }
