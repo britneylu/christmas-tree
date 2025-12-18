@@ -287,21 +287,41 @@
             document.getElementById("overlay").innerHTML =
                 `<div class="text-loading">${randomMessage}</div>`;
 
-            const files = event.target.files;
-            const reader = new FileReader();
+            // const files = event.target.files;
+            // const reader = new FileReader();
 
-            reader.onload = function (file) {
-                var arrayBuffer = file.target.result;
+            // reader.onload = function (file) {
+            //     var arrayBuffer = file.target.result;
 
-                listener.context.decodeAudioData(arrayBuffer, function (audioBuffer) {
-                    audio.setBuffer(audioBuffer);
-                    audio.play();
-                    analyser = new THREE.AudioAnalyser(audio, fftSize);
-                    init();
-                });
-            };
+            //     listener.context.decodeAudioData(arrayBuffer, function (audioBuffer) {
+            //         audio.setBuffer(audioBuffer);
+            //         audio.play();
+            //         analyser = new THREE.AudioAnalyser(audio, fftSize);
+            //         init();
+            //     });
+            // };
 
-            reader.readAsArrayBuffer(files[0]);
+            // reader.readAsArrayBuffer(files[0]);
+            // 2秒后开始处理
+            setTimeout(() => {
+                const files = event.target.files;
+                if (!files.length) return;
+
+                const reader = new FileReader();
+
+                reader.onload = function (file) {
+                    var arrayBuffer = file.target.result;
+
+                    listener.context.decodeAudioData(arrayBuffer, function (audioBuffer) {
+                        audio.setBuffer(audioBuffer);
+                        audio.play();
+                        analyser = new THREE.AudioAnalyser(audio, fftSize);
+                        init();
+                    });
+                };
+
+                reader.readAsArrayBuffer(files[0]);
+            }, 2000);
         }
 
         function addTree(scene, uniforms, totalPoints, treePosition) {
