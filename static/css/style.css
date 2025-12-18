@@ -230,11 +230,6 @@ legend {
     white-space: normal;
 }
 
-/* 进度条 */
-progress {
-    /* 空规则 */
-}
-
 /* 文本区域 */
 textarea {
     overflow: auto;
@@ -281,5 +276,45 @@ template {
     display: none;
 }
 
-/* 源映射注释 */
-/*# sourceMappingURL=normalize.min.css.map */
+@media (max-width: 480px) {
+    html {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+
+    body {
+        font-size: 12px;
+    }
+
+    .btn,
+    label {
+        width: 90vw;
+        max-width: 360px;
+        padding: 14px;
+        font-size: 0.95rem;
+    }
+
+    .title {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    .text-loading {
+        font-size: clamp(0.95rem, 4vw, 2rem);
+        line-height: 1.4;
+        text-align: center;
+        padding: 0 16px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .separator {
+        width: auto;
+        font-size: 0.85rem;
+    }
+}
