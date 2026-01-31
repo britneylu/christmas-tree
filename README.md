@@ -1,57 +1,47 @@
-# 3D 音乐圣诞树
+# 🎄 3D Music Christmas Tree
 
-#### Live Demo / 在线体验  
-🔗 [https://britneylu.github.io/christmas-tree/](https://britneylu.github.io/christmas-tree/)
+#### Live Demo  
+🔗 https://britneylu.github.io/christmas-tree/
 
----
+## Project Overview
+**3D Music Christmas Tree** is an interactive 3D music visualization project built with **Three.js**.  
+As music plays, the rhythm and frequency spectrum dynamically drive the Christmas tree’s lights, colors, and particle effects, creating a winter-inspired, festive atmosphere.
 
-## 项目简介
-**3D 音乐圣诞树** 是一个用 **Three.js** 做的互动式 3D 音乐可视化小项目。  
-音乐播放时，节奏和频谱会实时驱动圣诞树的灯光、颜色和粒子效果，整体是偏冰雪、冬日氛围的视觉风格。
+## Features
 
----
+- **Music Visualization**  
+  The Christmas tree reacts in real time to the music, with lights and particles moving to the beat and audio spectrum.
 
-## 有什么好玩的？
+- **Interactive 3D Scene**  
+  A fully navigable 3D environment that lets users freely view and enjoy the tree from different angles.
 
-- **音乐可视化**  
-  音乐一响，圣诞树就“活”了，灯光和粒子会跟着节奏一起动。
+- **Random Christmas Wishes**  
+  Each song selection displays a different festive message as a fun hidden surprise.
 
-- **可交互的 3D 场景**  
-  可以自由欣赏整棵 3D 圣诞树，沉浸感拉满。
+- **Flexible Music Selection**  
+  - 5 built-in Christmas songs  
+  - Support for uploading custom audio files
 
-- **随机圣诞祝福**  
-  每次选歌都会出现一句不同的圣诞祝福，小彩蛋式体验
+## Getting Started
 
-- **音乐选择很自由**  
-  - 内置 5 首圣诞歌曲  
-  - 也可以上传你自己的音乐来玩
+1. **Select a song**
+   - Choose one of the built-in tracks  
+   - Or upload your own music file
 
----
+2. **Enjoy the experience**
+   - Watch the lights and particles respond to the music  
+   - Relax and enjoy the holiday vibe
 
-## 快速上手
-
-1. **选一首音乐**
-   - 点任意一首内置歌曲  
-   - 或直接上传本地音乐文件
-
-2. **开始欣赏**
-   - 看灯光和粒子随音乐变化  
-   - 享受一点轻松的圣诞氛围
-
----
-
-## 技术小记
+## Tech Stack
 
 - **Three.js**  
-  用来搭 3D 场景和圣诞树
+  For building the 3D scene and Christmas tree
 
 - **Web Audio API**  
-  做实时音频分析，让画面跟着音乐动
+  For real-time audio analysis and visualization
 
-- **Shader + Bloom 特效**  
-  主要负责灯光、泛光和粒子效果
+- **Shaders & Bloom Effects**  
+  For lighting, glow, and particle effects
 
-- **响应式设计**  
-  在不同屏幕尺寸下都能正常体验
-
----
+- **Responsive Design**  
+  Optimized for different screen sizes and devices
